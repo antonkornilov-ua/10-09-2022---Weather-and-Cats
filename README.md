@@ -1,6 +1,6 @@
 # 10-09-2022---Weather-and-Cats
-<b>Hi everyone!</b>
-v1.0.0
+<b>Hi everyone!</b></br>
+v1.0.0</br>
 This simple app is my first try of using Prepros and SCSS. It is adaptive to most common screen ratios
 
 It can:
