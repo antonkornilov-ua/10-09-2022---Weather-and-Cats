@@ -1,0 +1,123 @@
+@import 'reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+%playfair{
+    font-family: 'Playfair Display', serif;
+}
+.main {
+    background-color: darkgrey;
+    height: 100vh;
+    @extend %playfair;
+}
+.wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    overflow: hidden;
+    max-width: 1170px;
+    margin: 0 auto;
+    @media (max-width: 1199.98px) {
+        & {
+            max-width: 970px;
+        }
+    }
+    @media (max-width: 991.98px) {
+        & {
+            max-width: 750px;
+        }
+    }
+    @media (max-width: 767.98px) {
+        & {
+            padding: 0 30px;
+            max-width: none;
+        }
+    }
+}
+//weather
+
+%content{
+    background-color: #7a956b;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 500px;
+    min-height: 150px;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+    color:#f0f0f0;
+    margin-bottom: 10%;
+    &:hover {
+        transform: scale(1.1);
+        transition: ease-out 1s;
+    }
+    &:not(:hover) {
+        transform: scale(1);
+        transition: ease-out 0.7s;
+    }
+    @media (max-width: 1199.98px) {
+        & {
+            min-width: 400px;
+        }
+    }
+    @media (max-width: 991.98px) {
+        & {
+            min-width: 300px;
+        }
+    }
+    @media (max-width: 767.98px) {
+        & {
+            min-width: 100px;
+            max-width: 200px;
+        }
+    }
+}
+
+.weather{
+@extend %content;
+margin-top: 5%; 
+}
+.weather__loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        min-width: 50px;
+    }
+}
+.weather__header{
+    display: flex;
+}
+.weather__main{
+    flex: 1 1 auto;
+}
+.weather__city{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.weather__status{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+%weatherafter{
+    display: inline-block;
+    margin-left: 5px;
+    content: "°C";
+}
+.weather__temp{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    &::after{
+        @extend %weatherafter;
+    }
+}
+.weather__feels-like::after{
+    @extend %weatherafter;
+}
+.weather__icon{
+    img{
+        width: 80px;
+    }
+}
+@import 'catstyle.scss';
