@@ -46,7 +46,7 @@ const catBlock = document.querySelector('#cats');
 const catBtn = document.querySelector('.cat-button');
 const catImg = document.querySelector('.cat-image');
 
-const catServer = 'http://aws.random.cat/meow';
+const catServer = 'https://aws.random.cat/meow';
 
 async function catFetch() {
     const catResponse = await fetch (catServer);
