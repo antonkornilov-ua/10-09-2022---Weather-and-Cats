@@ -7,4 +7,5 @@ It can:
   - shows actual weather in Kyiv, UA.
   - swows random cat image.
 
+Link: https://weather-and-cats.netlify.app/
 Have a nice day!
